@@ -1,14 +1,13 @@
-#import "bridge.h"
+#import <React/RCTBridgeModule.h>
 #import <React/RCTLog.h>
 
+@interface RCT_EXTERN_MODULE(TestBridge, NSObject)
 
-@implementation TestBridge
+RCT_EXTERN_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 
-RCT_EXPORT_MODULE();
-
-RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
++ (BOOL)requiresMainQueueSetup
 {
-  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+  return YES;
 }
 
 @end

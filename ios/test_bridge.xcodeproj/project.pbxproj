@@ -21,6 +21,7 @@
 		B8ECE24E65314D172FC32316 /* libPods-test_bridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */; };
 		CEFBBA2BAADEC6EFED3CB424 /* libPods-test_bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FC0616EE7917300679486 /* libPods-test_bridge.a */; };
 		F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1B8240E99140087CCE2 /* bridge.m */; };
+		F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1BB240E9D210087CCE2 /* bridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +68,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_bridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7CFA1B7240E98F80087CCE2 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		F7CFA1B8240E99140087CCE2 /* bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bridge.m; sourceTree = "<group>"; };
+		F7CFA1BA240E9D200087CCE2 /* test_bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_bridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		F7CFA1BB240E9D210087CCE2 /* bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bridge.swift; sourceTree = "<group>"; };
 		FC4E493C0E12D180E8C96CB6 /* Pods-test_bridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_bridge.debug.xcconfig"; path = "Target Support Files/Pods-test_bridge/Pods-test_bridge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,8 +206,9 @@
 		F7CFA1B6240E98CB0087CCE2 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				F7CFA1B7240E98F80087CCE2 /* bridge.h */,
 				F7CFA1B8240E99140087CCE2 /* bridge.m */,
+				F7CFA1BB240E9D210087CCE2 /* bridge.swift */,
+				F7CFA1BA240E9D200087CCE2 /* test_bridge-Bridging-Header.h */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -303,6 +306,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1130;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -541,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */,
 				F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
@@ -596,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 219B44F8AD896885977D6054 /* Pods-test_bridgeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -619,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7D74A4040B49BEB5FD5CF34 /* Pods-test_bridgeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = test_bridgeTests/Info.plist;
@@ -640,6 +649,7 @@
 			baseConfigurationReference = FC4E493C0E12D180E8C96CB6 /* Pods-test_bridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = test_bridge/Info.plist;
@@ -651,6 +661,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = test_bridge;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge/test_bridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -660,6 +674,7 @@
 			baseConfigurationReference = 12739C11254700921CA1EFF6 /* Pods-test_bridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = test_bridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -670,6 +685,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = test_bridge;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridge/test_bridge-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
