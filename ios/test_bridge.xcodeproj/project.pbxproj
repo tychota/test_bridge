@@ -20,6 +20,7 @@
 		B4B6B879E7A96ECCED6D119B /* libPods-test_bridge-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96B0EEAE570CF64617DCAA /* libPods-test_bridge-tvOS.a */; };
 		B8ECE24E65314D172FC32316 /* libPods-test_bridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */; };
 		CEFBBA2BAADEC6EFED3CB424 /* libPods-test_bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FC0616EE7917300679486 /* libPods-test_bridge.a */; };
+		F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1B8240E99140087CCE2 /* bridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_bridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CFA1B7240E98F80087CCE2 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		F7CFA1B8240E99140087CCE2 /* bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bridge.m; sourceTree = "<group>"; };
 		FC4E493C0E12D180E8C96CB6 /* Pods-test_bridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_bridge.debug.xcconfig"; path = "Target Support Files/Pods-test_bridge/Pods-test_bridge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* test_bridge */ = {
 			isa = PBXGroup;
 			children = (
+				F7CFA1B6240E98CB0087CCE2 /* Bridge */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,7 +165,6 @@
 				219B44F8AD896885977D6054 /* Pods-test_bridgeTests.debug.xcconfig */,
 				C7D74A4040B49BEB5FD5CF34 /* Pods-test_bridgeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +199,15 @@
 				2D02E4901E0B4A5D006451C7 /* test_bridge-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F7CFA1B6240E98CB0087CCE2 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFA1B7240E98F80087CCE2 /* bridge.h */,
+				F7CFA1B8240E99140087CCE2 /* bridge.m */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +320,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
