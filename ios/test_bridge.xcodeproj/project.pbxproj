@@ -20,6 +20,7 @@
 		B4B6B879E7A96ECCED6D119B /* libPods-test_bridge-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A96B0EEAE570CF64617DCAA /* libPods-test_bridge-tvOS.a */; };
 		B8ECE24E65314D172FC32316 /* libPods-test_bridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */; };
 		CEFBBA2BAADEC6EFED3CB424 /* libPods-test_bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FC0616EE7917300679486 /* libPods-test_bridge.a */; };
+		F7AE6C99240EA43600F6E91E /* ClientSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE6C98240EA43600F6E91E /* ClientSDK.swift */; };
 		F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1B8240E99140087CCE2 /* bridge.m */; };
 		F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1BB240E9D210087CCE2 /* bridge.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_bridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7AE6C98240EA43600F6E91E /* ClientSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSDK.swift; sourceTree = "<group>"; };
 		F7CFA1B8240E99140087CCE2 /* bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bridge.m; sourceTree = "<group>"; };
 		F7CFA1BA240E9D200087CCE2 /* test_bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_bridge-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7CFA1BB240E9D210087CCE2 /* bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bridge.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		13B07FAE1A68108700A75B9A /* test_bridge */ = {
 			isa = PBXGroup;
 			children = (
+				F7AE6C97240EA42100F6E91E /* ClientSDK */,
 				F7CFA1B6240E98CB0087CCE2 /* Bridge */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -201,6 +204,14 @@
 				2D02E4901E0B4A5D006451C7 /* test_bridge-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F7AE6C97240EA42100F6E91E /* ClientSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE6C98240EA43600F6E91E /* ClientSDK.swift */,
+			);
+			path = ClientSDK;
 			sourceTree = "<group>";
 		};
 		F7CFA1B6240E98CB0087CCE2 /* Bridge */ = {
@@ -549,6 +560,7 @@
 			files = (
 				F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */,
 				F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */,
+				F7AE6C99240EA43600F6E91E /* ClientSDK.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
