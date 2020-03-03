@@ -16,11 +16,18 @@ import {
   StatusBar,
   Button,
   NativeModules,
+  NativeEventEmitter,
 } from 'react-native';
 
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 
 let bridge = NativeModules.TestBridge;
+
+let eventBridge = NativeModules.TestEventBridge;
+// console.log(eventBridge.events.hello);
+
+let emitter = new NativeEventEmitter(eventBridge);
+emitter.addListener(eventBridge.events.hello, console.log);
 
 const App = () => {
   return (
@@ -50,6 +57,11 @@ const App = () => {
                   .then(data => alert(JSON.stringify(data)))
                   .catch(console.log)
               }
+            />
+
+            <Button
+              title="Test event bridge"
+              onPress={() => bridge.startSendingGreetings()}
             />
           </View>
         </ScrollView>

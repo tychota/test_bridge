@@ -7,6 +7,8 @@ RCT_EXTERN_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 
 RCT_EXTERN_METHOD(getSalutations:(NSString *)name resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(startSendingGreetings)
+
 + (BOOL)requiresMainQueueSetup
 {
   return YES;

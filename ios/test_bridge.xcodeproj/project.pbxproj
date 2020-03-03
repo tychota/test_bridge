@@ -21,6 +21,8 @@
 		B8ECE24E65314D172FC32316 /* libPods-test_bridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */; };
 		CEFBBA2BAADEC6EFED3CB424 /* libPods-test_bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FC0616EE7917300679486 /* libPods-test_bridge.a */; };
 		F7AE6C99240EA43600F6E91E /* ClientSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE6C98240EA43600F6E91E /* ClientSDK.swift */; };
+		F7AE6C9B240EACBD00F6E91E /* bridge_event.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE6C9A240EACBD00F6E91E /* bridge_event.m */; };
+		F7AE6C9D240EAD7100F6E91E /* bridge_event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE6C9C240EAD7100F6E91E /* bridge_event.swift */; };
 		F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1B8240E99140087CCE2 /* bridge.m */; };
 		F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFA1BB240E9D210087CCE2 /* bridge.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1DC88351E5B2B1D1D7DAA01 /* libPods-test_bridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test_bridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE6C98240EA43600F6E91E /* ClientSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSDK.swift; sourceTree = "<group>"; };
+		F7AE6C9A240EACBD00F6E91E /* bridge_event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bridge_event.m; sourceTree = "<group>"; };
+		F7AE6C9C240EAD7100F6E91E /* bridge_event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bridge_event.swift; sourceTree = "<group>"; };
 		F7CFA1B8240E99140087CCE2 /* bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bridge.m; sourceTree = "<group>"; };
 		F7CFA1BA240E9D200087CCE2 /* test_bridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_bridge-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7CFA1BB240E9D210087CCE2 /* bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bridge.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				F7CFA1B8240E99140087CCE2 /* bridge.m */,
 				F7CFA1BB240E9D210087CCE2 /* bridge.swift */,
 				F7CFA1BA240E9D200087CCE2 /* test_bridge-Bridging-Header.h */,
+				F7AE6C9A240EACBD00F6E91E /* bridge_event.m */,
+				F7AE6C9C240EAD7100F6E91E /* bridge_event.swift */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -559,6 +565,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7CFA1BC240E9D210087CCE2 /* bridge.swift in Sources */,
+				F7AE6C9B240EACBD00F6E91E /* bridge_event.m in Sources */,
+				F7AE6C9D240EAD7100F6E91E /* bridge_event.swift in Sources */,
 				F7CFA1B9240E99140087CCE2 /* bridge.m in Sources */,
 				F7AE6C99240EA43600F6E91E /* ClientSDK.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
@@ -860,7 +868,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -906,7 +914,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -17,9 +17,19 @@ class TestBridge: NSObject {
   func getSalutations(name: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
     let salutations = [Salutation(name: "Fabrice", greeting: "Hello"), Salutation(name: "kamile", greeting: "hello")]
     
-    // resolve(salutations)
+    resolve(salutations)
     
-    reject("ERRTOTO", "ToTo", NSError(domain: "RN", code: 1, userInfo: [:]))
+    // reject("ERRTOTO", "ToTo", NSError(domain: "RN", code: 1, userInfo: [:]))
+  }
+  
+  @objc(startSendingGreetings)
+  func startSendingGreetings() {
+    // To put on the main thread
+    DispatchQueue.main.async {
+      Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+        TestEventBridge.shared.sendGreetings(name: "Ben")
+      }
+    }
   }
   
 }
