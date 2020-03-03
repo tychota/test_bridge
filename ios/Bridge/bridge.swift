@@ -7,4 +7,9 @@ class TestBridge: NSObject {
     ClientSDK.shared.sayHello(name, to: location)
   }
   
+  @objc(getSalutations:resolver:rejecter:)
+  func getSalutations(name: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+    resolve("Hello")
+  }
+  
 }

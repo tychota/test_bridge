@@ -41,6 +41,11 @@ const App = () => {
               title="Test bridge"
               onPress={() => bridge.addEvent('hello', 'world')}
             />
+
+            <Button
+              title="Test promise bridge"
+              onPress={() => bridge.getSalutations('hello').then(alert)}
+            />
           </View>
         </ScrollView>
       </SafeAreaView>
