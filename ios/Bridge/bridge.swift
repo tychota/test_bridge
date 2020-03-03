@@ -1,3 +1,9 @@
+extension Salutation {
+  func toDict()->  [String: String] {
+    return ["name": name, "greeting": greeting]
+  }
+}
+
 
 @objc(TestBridge)
 class TestBridge: NSObject {
@@ -9,7 +15,11 @@ class TestBridge: NSObject {
   
   @objc(getSalutations:resolver:rejecter:)
   func getSalutations(name: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
-    resolve("Hello")
+    let salutations = [Salutation(name: "Fabrice", greeting: "Hello"), Salutation(name: "kamile", greeting: "hello")]
+    
+    // resolve(salutations)
+    
+    reject("ERRTOTO", "ToTo", NSError(domain: "RN", code: 1, userInfo: [:]))
   }
   
 }

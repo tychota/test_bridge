@@ -44,7 +44,12 @@ const App = () => {
 
             <Button
               title="Test promise bridge"
-              onPress={() => bridge.getSalutations('hello').then(alert)}
+              onPress={() =>
+                bridge
+                  .getSalutations('hello')
+                  .then(data => alert(JSON.stringify(data)))
+                  .catch(console.log)
+              }
             />
           </View>
         </ScrollView>

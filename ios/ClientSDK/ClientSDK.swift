@@ -5,3 +5,8 @@ class ClientSDK {
     print("\(name1) says Hello to \(name2)")
   }
 }
+
+struct Salutation {
+  var name: String
+  var greeting: String
+}
